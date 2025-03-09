@@ -11,11 +11,11 @@ class GameWindow {
 public:
     GameWindow(int columns, int rows, int mines, const std::string& fontPath, const std::string& imagePath, const std::string& playerName);
     void run();
-    void resetGame();                    // Resets the game
-    void toggleDebugMode();              // Toggles debug mode
-    void togglePause();                  // Toggles pause/resume
-    void showLeaderboard();              // Displays the leaderboard
-    void handleMouseClick(const sf::Event::MouseButtonEvent& mouseButton); // Handles button clicks
+    void resetGame();
+    void toggleDebugMode();              
+    void togglePause();                 
+    void showLeaderboard();            
+    void handleMouseClick(const sf::Event::MouseButtonEvent& mouseButton); 
     void updateTimerDisplay(int time);
     void updateCounter(int value);
     void updateCounterDisplay(int counter);
@@ -25,7 +25,7 @@ public:
 
 
 private:
-    Leaderboard leaderboard; // Instance of the Leaderboard class
+    Leaderboard leaderboard; 
     sf::RenderWindow window;
     sf::Font font;
 
@@ -39,30 +39,30 @@ private:
     // Timer-related members
     sf::Clock gameClock, timer;
     sf::Time pauseTime, timerText;
-    std::vector<sf::Sprite> timerDigits;   // Sprites for each digit in the timer
-    int elapsedTime = 0;                   // Timer value in seconds
-    float elapsedTimeOffset;  // Accumulates paused time
+    std::vector<sf::Sprite> timerDigits;   
+    int elapsedTime = 0;                   
+    float elapsedTimeOffset;  
 
 
     // Game state flags
-    bool debugMode = false;                // Track debug mode state
-    bool paused = false;                   // Track whether the game is paused
-    bool gameEnded = false;                // Track whether the game has ended (win/loss)
+    bool debugMode = false;                
+    bool paused = false;                   
+    bool gameEnded = false;               
 
     int currentCounter;
     std::vector<sf::Sprite> counterDigits;
-    bool leaderboardOpen = false;  // Track if the leaderboard is open
-    sf::RectangleShape leaderboardWindow;  // A simple placeholder for the leaderboard UI
-    bool playerWon = false; // New flag for winning
+    bool leaderboardOpen = false;  
+    sf::RectangleShape leaderboardWindow; 
+    bool playerWon = false; 
     bool playerLost = false;
     std::string playerName;
-    int tileSize; // Tile size in pixels
+    int tileSize; 
 
 
 
     struct Tile {
-        sf::Sprite backgroundSprite; // Background for the tile
-        sf::Sprite foregroundSprite; // Foreground (number or mine)
+        sf::Sprite backgroundSprite; 
+        sf::Sprite foregroundSprite; 
         sf::Sprite sprite;
         bool isRevealed = false;
         bool isFlagged = false;
@@ -71,7 +71,6 @@ private:
         int row = 0, col = 0;
         sf::Texture* numberTextures = nullptr;
 
-        // Updated constructor to accept the numberTextures array
 
         Tile(float x, float y, sf::Texture& hiddenTexture, sf::Texture& revealedTexture, sf::Texture* numberTextures);
 
