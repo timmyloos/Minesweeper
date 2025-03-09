@@ -15,6 +15,9 @@ Compiler: g++
 SFML version: SFML 2.5
 >
 >If you are a student in COP3503C at the University of Florida, you are strongly advised not to submit or use this code as your own work. Doing so would constitute plagiarism, which can result in severe academic consequences. Use this repository only for learning and reference purposes.
+>
+![Minesweeper Screenshot](https://media.discordapp.net/attachments/1342959000114823300/1348141306710331452/image.png?ex=67ce61ee&is=67cd106e&hm=50151edf35aa76f5d7d9d15400d14bbe8eaa2fc5a1b2ecc972766eb335a07476&=&format=webp&quality=lossless&width=709&height=567)
+>
 ## About 
 This project is a custom Minesweeper game built using C++ and SFML (Simple and Fast Multimedia Library). It replicates the classic Minesweeper experience, including core functionalities like mine placement, tile revealing, flagging, win/loss conditions, a leaderboard system, and game state management (pause, reset, etc.).
 >
